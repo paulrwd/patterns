@@ -1,0 +1,290 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": false,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": false,
+    "cutConstructors": false
+  },
+  "graphTraversal": {
+    "forwardDepth": 999,
+    "backwardDepth": 0,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": false,
+    "hideInterfaceCalls": false, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 4,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "ru.paulrwd.basepatterns.creational.abstractfactory.AuctionSiteProject",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_790392457 { 
+   	label=paulrwd
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1405034443 { 
+   	label=basepatterns
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_557907635 { 
+   	label=creational
+	labeljust=l
+	fillcolor="#c4c4c4"
+	style=filled
+   
+   subgraph cluster_526769159 { 
+   	label=abstractfactory
+	labeljust=l
+	fillcolor="#bababa"
+	style=filled
+   
+   AuctionSiteProject381792676[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)AuctionSiteProject</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+BankingPM2079892844[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)BankingPM</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ manageProject()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+BankingTeamFactory2079892844[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)BankingTeamFactory</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ getDeveloper(): Developer</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getProjectManager(): ProjectManager</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getTester(): Tester</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Developer381792676[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)Developer</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ writeCode()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+JavaDeveloper2079892844[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)JavaDeveloper</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ writeCode()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ManualTester518511863[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ManualTester</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ testCode()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+PhpDeveloper518511863[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)PhpDeveloper</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ writeCode()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ProjectManager381792676[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)ProjectManager</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ manageProject()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+ProjectTeamFactory381792676[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)ProjectTeamFactory</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ getDeveloper(): Developer</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getProjectManager(): ProjectManager</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getTester(): Tester</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+QATester2079892844[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)QATester</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ testCode()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Tester381792676[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)Tester</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ testCode()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+WebsitePM518511863[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)WebsitePM</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ manageProject()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+WebsiteTeamFactory518511863[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)WebsiteTeamFactory</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ getDeveloper(): Developer</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getProjectManager(): ProjectManager</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getTester(): Tester</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+} 
+} 
+
+'edges    
+AuctionSiteProject381792676 -> Developer381792676[label="main() -> writeCode()"];
+AuctionSiteProject381792676 -> ProjectManager381792676[label="main() -> manageProject()"];
+AuctionSiteProject381792676 -> Tester381792676[label="main() -> testCode()"];
+Developer381792676 -> JavaDeveloper2079892844[arrowhead=none, arrowtail=empty, dir=both];
+Developer381792676 -> PhpDeveloper518511863[arrowhead=none, arrowtail=empty, dir=both];
+ProjectManager381792676 -> BankingPM2079892844[arrowhead=none, arrowtail=empty, dir=both];
+ProjectManager381792676 -> WebsitePM518511863[arrowhead=none, arrowtail=empty, dir=both];
+ProjectTeamFactory381792676 -> BankingTeamFactory2079892844[arrowhead=none, arrowtail=empty, dir=both];
+ProjectTeamFactory381792676 -> WebsiteTeamFactory518511863[arrowhead=none, arrowtail=empty, dir=both];
+Tester381792676 -> ManualTester518511863[arrowhead=none, arrowtail=empty, dir=both];
+Tester381792676 -> QATester2079892844[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
